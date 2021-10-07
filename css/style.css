@@ -9,6 +9,7 @@ body {
 
 .main-block {
     background-color: #000000C0;
+    margin-bottom: 50px;
 }
 
 .huge-text {
@@ -23,4 +24,13 @@ body {
 
 .logo {
     height: 500px;
+}
+
+.secondary-block {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.link-noline {
+    text-decoration: none;
 }
