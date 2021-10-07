@@ -34,3 +34,10 @@ body {
 .link-noline {
     text-decoration: none;
 }
+
+.download_btn {
+    padding: 20px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
