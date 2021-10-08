@@ -10,7 +10,7 @@ function gotoLatestRelease() {
     http.onreadystatechange = (e) => {
         if (http.readyState != 4 || http.status != 200) { return; }
         let obj = JSON.parse(http.responseText);
-        window.open(obj[0].html_url, '_blank').focus();
+        document.location = obj[0].html_url;
     }
 }
 
@@ -23,6 +23,6 @@ function gotoNightlyBuild() {
     http.onreadystatechange = (e) => {
         if (http.readyState != 4 || http.status != 200) { return; }
         let obj = JSON.parse(http.responseText);
-        window.open(obj.workflow_runs[0].html_url, '_blank').focus();
+        document.location = obj.workflow_runs[0].html_url;
     }
 }
