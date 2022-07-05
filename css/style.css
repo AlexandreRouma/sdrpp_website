@@ -13,17 +13,35 @@ body {
 }
 
 .huge-text {
-    font-size: 120pt;
+    font-size: 8em;
     font-weight: bold;
 }
 
-.big-text {
-    font-size: 50pt;
-    font-weight: bold;
+@media (max-width: 767.98px) { 
+    .huge-text {
+        font-size: 5em;
+    }
 }
 
 .logo {
-    height: 500px;
+    height: 200px;
+}
+
+@media (max-width: 767.98px) { 
+    .logo {
+        height: 150px;
+    }
+}
+
+.social-icons {
+    height: 80px;
+}
+
+@media (max-width: 767.98px) { 
+    .social-icons {
+        height: 50px;
+    }
+    
 }
 
 .secondary-block {
@@ -33,6 +51,7 @@ body {
 
 .link-noline {
     text-decoration: none;
+    color: #9fc5ff
 }
 
 .download_btn {
