@@ -11,7 +11,12 @@ function gotoLatestRelease() {
     http.onreadystatechange = (e) => {
         if (http.readyState != 4 || http.status != 200) { return; }
         let obj = JSON.parse(http.responseText);
-        document.location = obj[0].html_url;
+        for (let i = 0; i < obj.length; i++) {
+            let o = obj[i];
+            if (o.prerelease) { continue; }
+            document.location = o.html_url;
+            break;
+        }
     }
 }
 
