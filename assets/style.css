@@ -142,11 +142,11 @@ header > .left {
 
 }
 
-header img {
+header > img {
     max-height: 100%;
     max-width: 100%;
     grid-column: 2 / 3;
-    border-radius: 2rem;
+    border-radius: 1rem;
 }
 
 .row {
@@ -207,7 +207,7 @@ footer > .content{
 }
 
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 900px) {
     body {
         font-size: 1.5rem;
     }
@@ -226,6 +226,26 @@ footer > .content{
     }
 }
 
+@media screen and (max-width: 500px) {
+    body {
+        font-size: 1.2rem;
+    }
+
+    .logo > img {
+        width: 7.5rem;
+        height: 7.5rem;
+    }
+
+
+    .logo > h1 > span:first-child {
+        font-size: 3rem;
+    }
+    
+    .logo > h1 > span:not(:first-child) {
+        font-size: 1.5rem;
+    }
+}
+
 ul {
     display: flex;
     flex-direction: column;
@@ -239,7 +259,7 @@ ul.collapsable {
 
 .carousel {
     margin-top: 1rem;
-    
+
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
