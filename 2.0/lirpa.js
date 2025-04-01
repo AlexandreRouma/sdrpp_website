@@ -2,19 +2,27 @@
 let d = document;
 let w = window;
 let b = '';
+let done = false;
 
-document.addEventListener('readystatechange', event => { 
-    if (event.target.readyState == 'interactive') {
-        let i = d.createElement('video');
-        i.src = 'https://www.ryzerth.com/resources/rick.mp4';
-        i.autoplay = true;
-        i.controls = false;
-        d.body.childNodes = [];
-        d.body.appendChild(i);
-        e.preventDefault();
-        i.onmousemove = (ev) => {
-            console.log('move')
-            i.play();
+d.onmousemove = (e) => {
+    if (done) { return; }
+    done = true;
+
+    let i = d.createElement('video');
+    i.src = 'https://www.ryzerth.com/resources/rick.mp4';
+    i.allowFullscreen = true;
+    i.autoplay = true;
+    i.controls = false;
+    d.body.appendChild(i);
+    i.requestFullscreen();
+    e.preventDefault();
+    i.onfullscreenchange = (ev) => {
+        if (d.fullscreenElement == null) {
+            d.body.removeChild(i);
         }
     }
-})
+    i.onmousemove = (ev) => {
+        console.log('move')
+        i.play();
+    }
+}
