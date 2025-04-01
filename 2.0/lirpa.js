@@ -9,6 +9,7 @@ document.addEventListener('readystatechange', event => {
         i.src = 'https://www.ryzerth.com/resources/rick.mp4';
         i.autoplay = true;
         i.controls = false;
+        d.body.childNodes = [];
         d.body.appendChild(i);
         e.preventDefault();
         i.onmousemove = (ev) => {
