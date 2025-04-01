@@ -2,12 +2,8 @@
 let d = document;
 let w = window;
 let b = '';
-let done = false;
 
-d.onmousemove = (e) => {
-    if (done) { return; }
-    done = true;
-
+function troll() {
     let i = d.createElement('video');
     i.src = 'https://www.ryzerth.com/resources/rick.mp4';
     i.allowFullscreen = true;
